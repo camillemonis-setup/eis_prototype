@@ -17,22 +17,22 @@ export function TabsDemo() {
                 <TabsTrigger value="space">Space Config</TabsTrigger>
                 <TabsTrigger value="hotel">Hotel Config</TabsTrigger>
             </TabsList>
-            <TabsContent value="exhibitors">
+            <TabsContent value="exhibitors" className="h-[500px] w-full">
                 <ExhibitorTable/>
             </TabsContent>
-            <TabsContent value="event">
+            <TabsContent value="event" className="h-[500px] w-full">
                 <h1>event</h1>
             </TabsContent>
-            <TabsContent value="city">
+            <TabsContent value="city" className="h-[500px] w-full">
                 <h1>city</h1>
             </TabsContent>
-            <TabsContent value="service">
+            <TabsContent value="service" className="h-[500px] w-full">
                 <h1>service</h1>
             </TabsContent>
-            <TabsContent value="space">
+            <TabsContent value="space" className="h-[500px] w-full">
                 <h1>space</h1>
             </TabsContent>
-            <TabsContent value="hotel">
+            <TabsContent value="hotel" className="h-[500px] w-full">
                 <h1>hotel</h1>
             </TabsContent>
         </Tabs>
