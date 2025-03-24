@@ -4,6 +4,7 @@ import {
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
+import ExhibitorTable from "./exhibitors-table"
 
 export function TabsDemo() {
     return (
@@ -17,7 +18,7 @@ export function TabsDemo() {
                 <TabsTrigger value="hotel">Hotel Config</TabsTrigger>
             </TabsList>
             <TabsContent value="exhibitors">
-                <h1>exhibitors</h1>
+                <ExhibitorTable/>
             </TabsContent>
             <TabsContent value="event">
                 <h1>event</h1>
