@@ -74,9 +74,13 @@ const ExhibitorTable = () => {
             headerName: "Booking status", editable: true,
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
-                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+                values: ["PENDING", "INCOMPLETE", "DONE"],
             },
-            field: "bookingStatus", cellRenderer: (params: any) => renderDropdown(params)
+            field: "bookingStatus", cellRenderer: (params: any) => renderDropdown(params),
+            filter: 'agSetColumnFilter',
+            filterParams: {
+                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+            }
         },
 
         {
@@ -85,23 +89,43 @@ const ExhibitorTable = () => {
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
-            }, field: "profileStatus", cellRenderer: (params: any) => renderDropdown(params)
+            }, field: "profileStatus", cellRenderer: (params: any) => renderDropdown(params),
+            filter: 'agSetColumnFilter',
+            filterParams: {
+                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+            }
         },
         {
             headerName: "Advert status", editable: true,
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
-            }, field: "advertStatus", cellRenderer: (params: any) => renderDropdown(params)
+            }, field: "advertStatus", cellRenderer: (params: any) => renderDropdown(params),
+            filter: 'agSetColumnFilter',
+            filterParams: {
+                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+            }
         },
         {
             headerName: "Badges status", editable: true,
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
-            }, field: "badgesStatus", cellRenderer: (params: any) => renderDropdown(params)
+            }, field: "badgesStatus", cellRenderer: (params: any) => renderDropdown(params),
+            filter: 'agSetColumnFilter',
+            filterParams: {
+                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+            }
         },
-        { headerName: "Representative status", field: "representativeStatus", cellRenderer: (params: any) => renderDropdown(params) },
+        { 
+            headerName: "Representative status", 
+            field: "representativeStatus", 
+            cellRenderer: (params: any) => renderDropdown(params),
+            filter: 'agSetColumnFilter',
+            filterParams: {
+                values: ["PENDING", "INCOMPLETE", "COMPLETED"],
+            }
+        },
 
         {
             headerName: "Booking date",
