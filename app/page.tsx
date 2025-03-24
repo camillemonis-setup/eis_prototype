@@ -1,11 +1,11 @@
 import { AppSidebar } from "@/components/app-sidebar"
+import { TabsDemo } from "@/components/dashboard/data-table"
+import { PieChartDashboard } from "@/components/dashboard/pie-chart"
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import {
@@ -13,6 +13,32 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+
+const profilesData = [
+  { status: "Complete", progress: 375, fill: "#D22B2B" },
+  { status: "Incomplete", progress: 20, fill: "#C41E3A," },
+]
+const descData = [
+  { status: "Complete", progress: 75, fill: "#D22B2B" },
+  { status: "Incomplete", progress: 400, fill: "#C41E3A," },
+]
+
+const logosData = [
+  { status: "Complete", progress: 675, fill: "#D22B2B" },
+  { status: "Incomplete", progress: 70, fill: "#C41E3A," },
+]
+
+const chartConfig = {
+  progress: {
+    label: "progress",
+  }
+} satisfies ChartConfig
 
 export default function Page() {
   return (
@@ -30,24 +56,21 @@ export default function Page() {
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
-                    Building Your Application
+                    Dashboard
                   </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+          <h2 className="text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Back End Developer</h2>
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            <PieChartDashboard chartConfig={chartConfig} chartData={profilesData} title="Profiles"/>
+            <PieChartDashboard chartConfig={chartConfig}  chartData={descData} title="Description"/>
+            <PieChartDashboard chartConfig={chartConfig}  chartData={logosData} title="Logos"/>
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <TabsDemo />
         </div>
       </SidebarInset>
     </SidebarProvider>
