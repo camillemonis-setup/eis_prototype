@@ -5,6 +5,7 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import ExhibitorTable from "./exhibitors-table"
+import EventTable from "./event-details"
 
 export function TabsDemo() {
     return (
@@ -21,7 +22,7 @@ export function TabsDemo() {
                 <ExhibitorTable/>
             </TabsContent>
             <TabsContent value="event" className="h-[500px] w-full">
-                <h1>event</h1>
+                <EventTable/>
             </TabsContent>
             <TabsContent value="city" className="h-[500px] w-full">
                 <h1>city</h1>

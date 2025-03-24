@@ -1,0 +1,179 @@
+[
+    {
+      "city_name": "Hanoi",
+      "event_type": "Fair",
+      "country_code": "VNM",
+      "start_date": "2025-04-02",
+      "start_time": "4:00 PM",
+      "close_date": "2025-04-02",
+      "close_time": "7:30 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "Pullman Hanoi",
+        "address": "40 Cat Linh Street, Dong Ha District, Hanoi, Vietnam",
+        "telephone": "+84 24 3733 0688"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Hanoi HS",
+      "event_type": "Fair",
+      "country_code": "VNM",
+      "start_date": "2025-04-03",
+      "start_time": "7:00 AM",
+      "close_date": "2025-04-04",
+      "close_time": "5:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "Pullman Hanoi",
+        "address": "40 Cat Linh Street, Dong Ha District, Hanoi, Vietnam",
+        "telephone": "+84 24 3733 0688"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Medan",
+      "event_type": "Fair",
+      "country_code": "IDN",
+      "start_date": "2024-10-13",
+      "start_time": "2:30 PM",
+      "close_date": "2024-10-13",
+      "close_time": "6:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "BLOCKED",
+      "venue": {
+        "name": "JW Marriott Hotel Medan",
+        "address": "Jl. Put7ri Hijau No.10, Kesawan, Kec.",
+        "telephone": "+62 61 4553333"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Surabaya",
+      "event_type": "Fair",
+      "country_code": "IDN",
+      "start_date": "2024-10-15",
+      "start_time": "4:00 PM",
+      "close_date": "2024-10-15",
+      "close_time": "7:30 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "BLOCKED",
+      "venue": {
+        "name": "JW Marriott Hotel Surabaya",
+        "address": "Jl. Embong Malang No.85-89",
+        "telephone": "+62 31 5458888"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Jakarta HS",
+      "event_type": "Fair",
+      "country_code": "IDN",
+      "start_date": "2025-03-19",
+      "start_time": "7:00 AM",
+      "close_date": "2025-03-20",
+      "close_time": "5:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "AYANA Midplaza Jakarta",
+        "address": "Jl. Jenderal Sudirman Kav. 10-11 Jakarta Pusat",
+        "telephone": "+62 21 2510888"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Jakarta",
+      "event_type": "Fair",
+      "country_code": "IDN",
+      "start_date": "2025-03-22",
+      "start_time": "1:30 PM",
+      "close_date": "2025-03-23",
+      "close_time": "5:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "AYANA Midplaza Jakarta",
+        "address": "Jl. Jenderal Sudirman Kav. 10-11 Jakarta Pusat",
+        "telephone": "+62 21 2510888"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Bangkok HS",
+      "event_type": "Fair",
+      "country_code": "THA",
+      "start_date": "2025-03-25",
+      "start_time": "7:00 AM",
+      "close_date": "2025-03-26",
+      "close_time": "5:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "Royal Orchid Sheraton Hotel Towers",
+        "address": "2 Charoen Krung Road Soi 30 (Captain Bush Lane) Siphya, Bangrak 10500 Bangkok, Thailand",
+        "telephone": "+66 2665 3378"
+      },
+      "currency": "US Dollar - USD"
+    },
+    {
+      "city_name": "Ho Chi Minh HS",
+      "event_type": "Fair",
+      "country_code": "VNM",
+      "start_date": "2025-03-28",
+      "start_time": "7:00 AM",
+      "close_date": "2025-03-28",
+      "close_time": "5:00 PM",
+      "service": {
+        "printing": "1",
+        "seminars": "1",
+        "translators": "1",
+        "panel": "1"
+      },
+      "status": "ACTIVE",
+      "venue": {
+        "name": "Sofitel Saigon Plaza",
+        "address": "17 Lê Duẩn Boulevard, District 1, HCH City 070000, Vietnam",
+        "telephone": "+84 2838241555"
+      },
+      "currency": "US Dollar - USD"
+    }
+  ]
+  
