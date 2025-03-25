@@ -16,6 +16,7 @@ import data from './exhibitor.json';
 import { Button, buttonVariants } from '../ui/button';
 import { Edit2 } from 'lucide-react';
 import Link from 'next/link';
+import { Input } from '../ui/input';
 
 const renderDropdown = (params: any) => {
     let bgColor;
@@ -117,9 +118,9 @@ const ExhibitorTable = () => {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
             }
         },
-        { 
-            headerName: "Representative status", 
-            field: "representativeStatus", 
+        {
+            headerName: "Representative status",
+            field: "representativeStatus",
             cellRenderer: (params: any) => renderDropdown(params),
             filter: 'agSetColumnFilter',
             filterParams: {
@@ -141,7 +142,7 @@ const ExhibitorTable = () => {
             headerName: "Actions", pinned: 'right', field: "actions", width: 150, cellRenderer: () => {
                 return (
                     <Button asChild>
-                        <Link href="/"><Edit2/></Link>
+                        <Link href="/"><Edit2 /></Link>
                     </Button>
 
                 )
@@ -149,12 +150,21 @@ const ExhibitorTable = () => {
         },
     ]);
 
+    const [filterSearch, setFilterSearch] = useState('');
+
     return (
         <div className="ag-theme-alpine" style={{ height: 400, width: "100%" }}>
-            <AgGridReact rowData={rowData} columnDefs={columnDefs} domLayout='autoHeight' pagination={true} 
+            <div className="flex justify-between mb-2">
+                <Input placeholder="Search" onChange={(e) => setFilterSearch(e.target.value)} className="mr-2 w-60" />
+                <Button variant="outline" className='bg-green-600 hover:bg-green-300 text-black'>Add new Exhibitor</Button>
+            </div>
+            <AgGridReact rowData={rowData} columnDefs={columnDefs} 
+            pagination={true} 
             paginationPageSize={10}
-            paginationPageSizeSelector={[10, 20, 50, 100]}/>
-        </div>
+            paginationPageSizeSelector={[10, 20, 50, 100]}
+                quickFilterText={filterSearch}
+            />
+        </div >
     );
 };
 

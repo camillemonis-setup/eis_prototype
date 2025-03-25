@@ -57,7 +57,7 @@ const EventTable = () => {
 
     return (
         <div className="ag-theme-alpine" style={{ height: 400, width: "100%" }}>
-            <AgGridReact rowData={rowData} columnDefs={columnDefs} domLayout='autoHeight' pagination={true} 
+            <AgGridReact rowData={rowData} columnDefs={columnDefs} pagination={true} 
             paginationPageSize={10}
             paginationPageSizeSelector={[10, 20, 50, 100]}/>
         </div>
