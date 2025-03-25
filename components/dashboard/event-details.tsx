@@ -17,6 +17,8 @@ import data from './event.json';
 import { Button } from '../ui/button';
 import { Edit2 } from 'lucide-react';
 import Link from 'next/link';
+import TimePicker from '../time-picker2';
+
 
 const renderDropdown = (params: any) => {
     let bgColor;
@@ -38,6 +40,11 @@ const renderDropdown = (params: any) => {
 
 }
 
+const TimePickerRenderer = (params: any) => {
+    const [time, setTime] = useState<string>(params.params);
+    return <TimePicker value={time} onChange={setTime} />
+};
+
 const EventTable = () => {
     const [rowData] = useState(data);
 
@@ -45,10 +52,14 @@ const EventTable = () => {
         { headerName: "City Name", field: "city_name", sortable: true, filter: true, editable: true, pinned: 'left', width: 130 },
         { headerName: "Event Type", field: "event_type", sortable: true, filter: true, width: 150 },
         { headerName: "Country Code", field: "country_code", sortable: true, filter: true, editable: true },
-        { headerName: "Start Date", field: "start_date", sortable: true, filter: "agDateColumnFilter", editable: true },
-        { headerName: "Start Time", field: "start_time", sortable: true, filter: true, editable: true },
+        { headerName: "Start Date", field: "start_date", sortable: true, filter: "agDateColumnFilter", editable: true ,},
+        { headerName: "Start Time", field: "start_time", sortable: true, filter: true, editable: true ,
+            cellRenderer: (params: any) => <TimePickerRenderer params={params.value} />
+        },
         { headerName: "Close Date", field: "close_date", sortable: true, filter: "agDateColumnFilter", editable: true },
-        { headerName: "Close Time", field: "close_time", sortable: true, filter: true, editable: true },
+        { headerName: "Close Time", field: "close_time", sortable: true, filter: true, editable: true,
+            cellRenderer: (params: any) => <TimePickerRenderer params={params.value} />
+         },
         { headerName: "Status", field: "status", sortable: true, filter: true, editable: true, cellRenderer: (params: any) => renderDropdown(params), width: 130,
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
