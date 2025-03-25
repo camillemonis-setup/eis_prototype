@@ -5,13 +5,24 @@ import {
   AudioWaveform,
   BookOpen,
   Bot,
+  Calendar1Icon,
   Command,
+  File,
   Frame,
   GalleryVerticalEnd,
+  GlobeIcon,
+  HotelIcon,
+  LayoutDashboardIcon,
   Map,
+  MapIcon,
   PieChart,
+  PlaneIcon,
+  PrinterIcon,
   Settings2,
+  Settings2Icon,
   SquareTerminal,
+  User2Icon,
+  WrenchIcon,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -36,8 +47,8 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
-      icon: SquareTerminal,
+      url: "/",
+      icon: LayoutDashboardIcon,
       isActive: true,
       items: [],
     },
@@ -45,7 +56,7 @@ const data = {
 
       title: "Manage Schedules",
       url: "#",
-      icon: Bot,
+      icon: Calendar1Icon,
       items: [
         {
           title: "Future Schedule",
@@ -68,7 +79,7 @@ const data = {
     {
       title: "Manage Clients",
       url: "#",
-      icon: BookOpen,
+      icon: User2Icon,
       items: [
         {
           title: "Client Category List",
@@ -90,7 +101,6 @@ const data = {
       title: "Stand Booking",
       url: "#",
       icon: SquareTerminal,
-      isActive: true,
       items: [{
         title: "New Booking",
         url: "#",
@@ -104,8 +114,7 @@ const data = {
     {
       title: "Required Docs",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: File,
       items: [{
         title: "New Booking",
         url: "#",
@@ -119,8 +128,7 @@ const data = {
     {
       title: "Extra Services",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: WrenchIcon,
       items: [{
         title: "New Booking",
         url: "#",
@@ -134,8 +142,7 @@ const data = {
     {
       title: "Hotel Bookings",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: HotelIcon,
       items: [{
         title: "New Booking",
         url: "#",
@@ -149,8 +156,7 @@ const data = {
     {
       title: "Printing Services",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: PrinterIcon,
       items: [{
         title: "New Booking",
         url: "#",
@@ -164,8 +170,7 @@ const data = {
     {
       title: "Shipping & Tracking",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: PlaneIcon,
       items: [{
         title: "New Booking",
         url: "#",
@@ -181,8 +186,7 @@ const data = {
     {
       title: "Manage Settings",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: Settings2Icon,
       items: [
         {
           title: "Series types",
@@ -220,9 +224,8 @@ const data = {
     },
     {
       title: "Manage Web Settings",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      url: '#',
+      icon: GlobeIcon,
       items: [
         {
           title: "Study areas",
@@ -241,8 +244,7 @@ const data = {
     {
       title: "Manage Countries",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      icon: MapIcon,
       items: [
         {
           title: "World countries",
