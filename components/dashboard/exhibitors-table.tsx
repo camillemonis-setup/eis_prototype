@@ -101,7 +101,8 @@ const ExhibitorTable = () => {
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
-            }, field: "advertStatus", cellRenderer: (params: any) => renderDropdown(params),
+            }, 
+            field: "advertStatus", cellRenderer: (params: any) => renderDropdown(params),
             filter: 'agSetColumnFilter',
             filterParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
@@ -156,12 +157,12 @@ const ExhibitorTable = () => {
         <div className="ag-theme-alpine" style={{ height: 400, width: "100%" }}>
             <div className="flex justify-between mb-2">
                 <Input placeholder="Search" onChange={(e) => setFilterSearch(e.target.value)} className="mr-2 w-60" />
-                <Button variant="outline" className='bg-green-600 hover:bg-green-300 text-black'>Add new Exhibitor</Button>
+                <Button variant="outline" className='bg-green-600 hover:bg-green-300 text-white dark:bg-amber-50 dark:text-black dark:hover:bg-amber-200'>Add new Exhibitor</Button>
             </div>
-            <AgGridReact rowData={rowData} columnDefs={columnDefs} 
-            pagination={true} 
-            paginationPageSize={10}
-            paginationPageSizeSelector={[10, 20, 50, 100]}
+            <AgGridReact rowData={rowData} columnDefs={columnDefs}
+                pagination={true}
+                paginationPageSize={10}
+                paginationPageSizeSelector={[10, 20, 50, 100]}
                 quickFilterText={filterSearch}
             />
         </div >

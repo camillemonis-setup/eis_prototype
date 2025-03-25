@@ -2,6 +2,7 @@
 import {
     AllCommunityModule, ModuleRegistry,
     ColDef,
+    ColGroupDef,
 } from 'ag-grid-community';
 import { AllEnterpriseModule, LicenseManager } from 'ag-grid-enterprise';
 import { AgGridReact } from 'ag-grid-react';
@@ -40,26 +41,39 @@ const renderDropdown = (params: any) => {
 const EventTable = () => {
     const [rowData] = useState(data);
 
-    const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-        { headerName: "City Name", field: "city_name", sortable: true, filter: true, editable: true, pinned: 'left', width:130 },
+    const [columnDefs, setColumnDefs] = useState<(ColDef | ColGroupDef)[]>([
+        { headerName: "City Name", field: "city_name", sortable: true, filter: true, editable: true, pinned: 'left', width: 130 },
         { headerName: "Event Type", field: "event_type", sortable: true, filter: true, width: 150 },
         { headerName: "Country Code", field: "country_code", sortable: true, filter: true, editable: true },
         { headerName: "Start Date", field: "start_date", sortable: true, filter: "agDateColumnFilter", editable: true },
         { headerName: "Start Time", field: "start_time", sortable: true, filter: true, editable: true },
         { headerName: "Close Date", field: "close_date", sortable: true, filter: "agDateColumnFilter", editable: true },
         { headerName: "Close Time", field: "close_time", sortable: true, filter: true, editable: true },
-        { headerName: "Status", field: "status", sortable: true, filter: true, editable: true, cellRenderer: (params: any) => renderDropdown(params), width: 130 },
+        { headerName: "Status", field: "status", sortable: true, filter: true, editable: true, cellRenderer: (params: any) => renderDropdown(params), width: 130,
+            cellEditor: "agSelectCellEditor",
+            cellEditorParams: {
+                values: ["ACTIVE", "BLOCKED", "STOPPED"]}
+         },
         { headerName: "Venue Name", field: "venue.name", sortable: true, filter: true, editable: true },
         { headerName: "Venue Address", field: "venue.address", sortable: true, filter: true, editable: true },
         { headerName: "Telephone", field: "venue.telephone", sortable: true, filter: true, editable: true },
-        { headerName: "Currency", field: "currency", sortable: true, filter: true, editable: true }
+        { headerName: "Currency", field: "currency", sortable: true, filter: true, editable: true },
+        {
+            headerName: 'Service Limits',
+            children: [
+                { field: 'service.printing', headerName: 'Printing' , width: 130},
+                { field: 'service.seminars', headerName: 'Seminars', width: 130 },
+                { field: 'service.translators', headerName: 'Translators', width: 130 },
+                { field: 'service.panel', headerName: 'Panel', width: 130 },
+            ]
+        },
     ]);
 
     return (
         <div className="ag-theme-alpine" style={{ height: 400, width: "100%" }}>
-            <AgGridReact rowData={rowData} columnDefs={columnDefs} pagination={true} 
-            paginationPageSize={10}
-            paginationPageSizeSelector={[10, 20, 50, 100]}/>
+            <AgGridReact rowData={rowData} columnDefs={columnDefs} pagination={true}
+                paginationPageSize={10}
+                paginationPageSizeSelector={[10, 20, 50, 100]} />
         </div>
     );
 };
