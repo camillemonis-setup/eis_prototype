@@ -16,6 +16,7 @@ import {
 import {
   ChartConfig,
 } from "@/components/ui/chart"
+import { ModeToggle } from "@/components/ui/mode-toggle"
 
 const profilesData = [
   { status: "Complete", progress: 375, fill: "#D22B2B" },
@@ -43,6 +44,7 @@ export default function Page() {
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
+            <ModeToggle/>
             <Separator
               orientation="vertical"
               className="mr-2 data-[orientation=vertical]:h-4"
@@ -59,7 +61,7 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <h2 className="text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Back End Developer</h2>
+            <h2 className="text-2xl/7 font-bold text-gray-900 dark:text-gray-100 sm:truncate sm:text-3xl sm:tracking-tight">Schedule: Asia Education Fair</h2>
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <PieChartDashboard chartConfig={chartConfig} chartData={profilesData} title="Profiles"/>
             <PieChartDashboard chartConfig={chartConfig}  chartData={descData} title="Description"/>

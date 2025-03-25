@@ -267,7 +267,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <img src="https://eis.bmi-systems.net/global_assets/images/bmi-logo-light.png" alt="BMI Systems" className="h-8 w-auto" />
+        <img 
+          src="https://eis.bmi-systems.net/global_assets/images/bmi-logo-light.png" 
+          alt="BMI Systems" 
+          className="h-10 w-auto max-w-full object-contain" 
+        />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} title="Navigation" />
