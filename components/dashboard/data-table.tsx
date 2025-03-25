@@ -6,11 +6,32 @@ import {
 } from "@/components/ui/tabs"
 import ExhibitorTable from "./exhibitors-table"
 import EventTable from "./event-details"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
+import { Label } from "../ui/label"
 
 export function TabsDemo() {
     return (
-        <Tabs defaultValue="exhibitors" className="w-full">
-            <TabsList className="w-full">
+        <Tabs defaultValue="exhibitors" className="flex w-full flex-col justify-start gap-6">
+            <Label htmlFor="view-selector" className="sr-only">
+                View
+            </Label>
+            <Select defaultValue="outline">
+                <SelectTrigger
+                    className="@4xl/main:hidden flex w-fit"
+                    id="view-selector"
+                >
+                    <SelectValue placeholder="Select a view" />
+                </SelectTrigger>
+                <SelectContent>
+                    <SelectItem value="exhibitors">Exhibitor</SelectItem>
+                    <SelectItem value="event">Event Details</SelectItem>
+                    <SelectItem value="city">City Config</SelectItem>
+                    <SelectItem value="service">Service Config</SelectItem>
+                    <SelectItem value="space">Space Config</SelectItem>
+                    <SelectItem value="hotel">Hotel Config</SelectItem>
+                </SelectContent>
+            </Select>
+            <TabsList className="@4xl/main:flex hidden">
                 <TabsTrigger value="exhibitors">Exhibitor</TabsTrigger>
                 <TabsTrigger value="event">Event Details</TabsTrigger>
                 <TabsTrigger value="city">City Config</TabsTrigger>
@@ -19,10 +40,10 @@ export function TabsDemo() {
                 <TabsTrigger value="hotel">Hotel Config</TabsTrigger>
             </TabsList>
             <TabsContent value="exhibitors" className="min-h-[500px] w-full">
-                <ExhibitorTable/>
+                <ExhibitorTable />
             </TabsContent>
             <TabsContent value="event" className="min-h-[500px] w-full">
-                <EventTable/>
+                <EventTable />
             </TabsContent>
             <TabsContent value="city" className="min-h-[500px] w-full">
                 <h1>city</h1>
