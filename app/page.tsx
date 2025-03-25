@@ -13,10 +13,11 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { ModeToggle } from "@/components/ui/mode-toggle"
 import {
   ChartConfig,
 } from "@/components/ui/chart"
-import { ModeToggle } from "@/components/ui/mode-toggle"
+
 
 const profilesData = [
   { status: "Complete", progress: 375, fill: "#D22B2B" },

@@ -60,19 +60,19 @@ const data = {
       items: [
         {
           title: "Future Schedule",
-          url: "#",
+          url: "/schedules",
         },
         {
           title: "Current Schedule",
-          url: "#",
+          url: "/schedules",
         },
         {
           title: "Archived Schedule",
-          url: "#",
+          url: "/schedules",
         },
         {
           title: "Cancelled Schedule",
-          url: "#",
+          url: "/schedules",
         },
       ],
     },
