@@ -1,3 +1,4 @@
+'use client'
 import {
     Tabs,
     TabsContent,
@@ -8,16 +9,20 @@ import ExhibitorTable from "./exhibitors-table"
 import EventTable from "./event-details"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 import { Label } from "../ui/label"
+import { useState } from "react"
 
 export function TabsDemo() {
+    const [view, setView] = useState("exhibitors")
+    
     return (
-        <Tabs defaultValue="exhibitors" className="flex w-full flex-col justify-start gap-6">
+        <Tabs value={view} onValueChange={setView} className="flex w-full flex-col justify-start gap-6">
             <Label htmlFor="view-selector" className="sr-only">
                 View
             </Label>
-            <Select defaultValue="outline">
+            <div className="flex md:hidden">
+            <Select defaultValue="exhibitors" onValueChange={(e)=>setView(e)}>
                 <SelectTrigger
-                    className="@4xl/main:hidden flex w-fit"
+                    className=" flex w-fit"
                     id="view-selector"
                 >
                     <SelectValue placeholder="Select a view" />
@@ -31,7 +36,9 @@ export function TabsDemo() {
                     <SelectItem value="hotel">Hotel Config</SelectItem>
                 </SelectContent>
             </Select>
-            <TabsList className="@4xl/main:flex hidden">
+            </div>
+
+            <TabsList className="hidden md:flex w-full">
                 <TabsTrigger value="exhibitors">Exhibitor</TabsTrigger>
                 <TabsTrigger value="event">Event Details</TabsTrigger>
                 <TabsTrigger value="city">City Config</TabsTrigger>
