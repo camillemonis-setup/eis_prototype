@@ -17,7 +17,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 // export const revalidate = 2
 
-export async function getEmployees() {
+async function getEmployees() {
     const res = await fetch('https://672352bf493fac3cf24a7644.mockapi.io/testproj/getall',{
         cache: 'force-cache',
       })
@@ -28,7 +28,7 @@ export async function getEmployees() {
 }
 
 export default async function MasterDetail() {
-            const employee_data = await getEmployees()
+    const employee_data = await getEmployees()
     return (
         <>
             <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">

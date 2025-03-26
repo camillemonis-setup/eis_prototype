@@ -95,7 +95,7 @@ export default function MasterDetail() {
   }, []);
 
   const onGridReady = useCallback((params: GridReadyEvent) => {
-    fetch("https://www.ag-grid.com/example-assets/master-detail-data.json")
+    fetch("https://www.ag-grid.com/example-assets/master-detail-data.json",{cache:"force-cache"})
       .then((resp) => resp.json())
       .then((data: IAccount[]) => {
         setRowData(data);
