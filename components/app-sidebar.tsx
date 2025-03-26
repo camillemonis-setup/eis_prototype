@@ -83,15 +83,15 @@ const data = {
       items: [
         {
           title: "Client Category List",
-          url: "#",
+          url: "/client",
         },
         {
           title: "Account Profile Status",
-          url: "#",
+          url: "/client",
         },
         {
           title: "Service Booking Status",
-          url: "#",
+          url: "/client",
         }
       ],
     },

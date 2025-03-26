@@ -17,6 +17,8 @@ import { ModeToggle } from "@/components/ui/mode-toggle"
 import {
   ChartConfig,
 } from "@/components/ui/chart"
+import { Button } from "@/components/ui/button"
+import { toast } from "sonner"
 
 
 const profilesData = [
