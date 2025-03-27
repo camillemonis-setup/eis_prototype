@@ -48,11 +48,11 @@ const ExhibitorTable = () => {
             field: "businessLogo",
             cellRenderer: (params: any) => {
                 return (
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={params.value} alt='Logo' style={{ width: 40, height: 40, marginRight: 10 }} />
-                        <div>
-                            <strong>{params.data.university}</strong><br />
-                            <span>{params.data.location}</span>
+                    <div className="flex items-center space-x-4">
+                        <img src={params.value} alt="Logo" className="h-10 w-10 object-contain" />
+                        <div className="flex flex-col justify-center">
+                            <strong className="text-sm">{params.data.university}</strong>
+                            <span className="text-xs text-gray-500">{params.data.location}</span>
                         </div>
                     </div>
                 )
@@ -64,10 +64,11 @@ const ExhibitorTable = () => {
             editable: true,
             cellRenderer: (params: any) => {
                 return (
-                    <div>
-                        <a href='#' style={{ color: 'blue', textDecoration: 'none' }}>{params.value}</a><br />
-                        <span>{params.data.position}</span>
+                    <div className="flex flex-col justify-center">
+                        <strong className="text-sm">{params.value}</strong>
+                        <span className="text-xs text-gray-500">{params.data.position}</span>
                     </div>
+
                 )
             }
         },
@@ -101,7 +102,7 @@ const ExhibitorTable = () => {
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: ["PENDING", "INCOMPLETE", "COMPLETED"],
-            }, 
+            },
             field: "advertStatus", cellRenderer: (params: any) => renderDropdown(params),
             filter: 'agSetColumnFilter',
             filterParams: {

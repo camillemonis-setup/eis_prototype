@@ -268,7 +268,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <img 
-          src="https://eis.bmi-systems.net/global_assets/images/bmi-logo-light.png" 
+          src="https://bmiglobaled.com/wordpress/wp-content/uploads/2023/01/BMI-THE-Logo-aligned-01.png" 
           alt="BMI Systems" 
           className="h-10 w-auto max-w-full object-contain" 
         />
