@@ -38,7 +38,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner"
 import { Employee } from "@/app/client/interfaces";
 import { Trash2Icon } from "lucide-react";
-import { deleteEmployee } from "@/app/client/actions";
+import { deleteEmployee, updateEmployee } from "@/app/client/actions";
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
 // Register all Community and Enterprise features
@@ -127,32 +127,27 @@ const EmployeeTable = ({ data }: EmployeeTableProps) => {
         });
     }, []);
 
-    const saveChanges = useCallback(() => {
-        const savePromises = changes.map(change => {
-            return fetch(`https://672352bf493fac3cf24a7644.mockapi.io/testproj/getall/${change.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(change),
+    const saveChanges = useCallback(async () => {
+        try {
+            const savePromises = changes.map(async change => {
+                const response = await updateEmployee(change);
+                return response === "ok";
             });
-        });
-
-        Promise.all(savePromises)
-            .then(responses => {
-                const allSuccessful = responses.every(response => response.ok);
-                if (allSuccessful) {
-                    console.log('All changes saved successfully');
-                    setChanges([]); // Clear changes after successful save
-                    toast.success("All changes saved successfully!")
-                } else {
-                    console.error('Failed to save some changes');
-                    toast("Failed to save some changes")
-                }
-            })
-            .catch(error => {
-                console.error('Error saving changes:', error);
-            });
+    
+            const results = await Promise.all(savePromises);
+    
+            if (results.every(success => success)) {
+                console.log('All changes saved successfully');
+                setChanges([]);
+                toast.success("All changes saved successfully!");
+            } else {
+                console.error('Failed to save some changes');
+                toast.error("Failed to save some changes");
+            }
+        } catch (error) {
+            console.error('Error saving changes:', error);
+            toast.error("An error occurred while saving changes");
+        }
     }, [changes]);
     // this is to change in every single change
     // const onCellValueChanged = useCallback((event: any) => {

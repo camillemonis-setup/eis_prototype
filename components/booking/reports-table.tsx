@@ -44,11 +44,11 @@ const ReportsTable: React.FC<ReportsTableProps> = ({ data }) => {
     const [rowData, setRowData] = useState<Employee[]>(data);
 
     const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-        { field: "id", editable: true },
-        { field: "name", cellRenderer: "agGroupCellRenderer", editable: true },
-        { field: "lastname", cellRenderer: "agGroupCellRenderer", editable: true },
-        { field: "country", editable: true },
-        { field: "bday", editable: true },
+        { field: "id"},
+        { field: "name"},
+        { field: "lastname"},
+        { field: "country"},
+        { field: "bday"},
     ]);
 
         const onGridReady = useCallback((params: GridReadyEvent) => {
