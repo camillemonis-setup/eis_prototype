@@ -23,16 +23,16 @@ import { toast } from "sonner"
 
 const profilesData = [
   { status: "Complete", progress: 375, fill: "#D22B2B" },
-  { status: "Incomplete", progress: 20, fill: "#FF0B0B," },
+  { status: "Incomplete", progress: 20, fill: "#FF5C5C" },
 ]
 const descData = [
   { status: "Complete", progress: 75, fill: "#D22B2B" },
-  { status: "Incomplete", progress: 400, fill: "#FF0B0B," },
+  { status: "Incomplete", progress: 400, fill: "#FF5C5C" },
 ]
 
 const logosData = [
   { status: "Complete", progress: 675, fill: "#D22B2B" },
-  { status: "Incomplete", progress: 70, fill: "#FF0B0B," },
+  { status: "Incomplete", progress: 70, fill: "#FF5C5C" },
 ]
 
 const chartConfig = {
