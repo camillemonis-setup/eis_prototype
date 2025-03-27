@@ -73,7 +73,6 @@ const ReportsTable: React.FC<ReportsTableProps> = ({ data }) => {
                 defaultColDef={defaultColDef}
                 onGridReady={onGridReady}
                 onFirstDataRendered={onFirstDataRendered}
-                // onCellValueChanged={onCellValueChanged}
             />
   )
 }
