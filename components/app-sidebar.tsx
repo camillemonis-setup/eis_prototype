@@ -103,11 +103,11 @@ const data = {
       icon: SquareTerminal,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
@@ -117,11 +117,11 @@ const data = {
       icon: File,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
@@ -131,11 +131,11 @@ const data = {
       icon: WrenchIcon,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
@@ -145,11 +145,11 @@ const data = {
       icon: HotelIcon,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
@@ -159,11 +159,11 @@ const data = {
       icon: PrinterIcon,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
@@ -173,11 +173,11 @@ const data = {
       icon: PlaneIcon,
       items: [{
         title: "New Booking",
-        url: "#",
+        url: "/booking/create",
       },
       {
         title: "Booking Reports",
-        url: "#",
+        url: "/booking/view",
       },
       ],
     },
