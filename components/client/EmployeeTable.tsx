@@ -98,6 +98,19 @@ const EmployeeTable = ({ data }: EmployeeTableProps) => {
 
     const onCellValueChanged = useCallback((event: any) => {
         const updatedData = event.data;
+            // Validations
+    if (updatedData.name.length < 2) {
+        toast.error(`Name must be at least 2 characters long!`);
+        // Optionally, reset the invalid value to its previous state
+        event.node.setDataValue('name', event.oldValue);
+        return;
+    }
+    if (updatedData.lastname.length < 2) {
+        toast.error(`Last Name must be at least 2 characters long!`);
+        // Optionally, reset the invalid value to its previous state
+        event.node.setDataValue('lastname', event.oldValue);
+        return;
+    }
         console.log('Data after change:', updatedData);
         setChanges(prevChanges => {
             // Check if the row already exists in the changes array
